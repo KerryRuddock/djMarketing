@@ -1,0 +1,44 @@
+
+// When DOM is fully loaded, all images, links, and scripts and sub-frames have finished loading.
+window.onload = function() {
+    console.log ('dom loaded');
+    $('.dropdown')
+      .not ('.open')
+
+      .hover(function () {
+        $(this)
+          .find('.dropdown-menu')
+          .first()
+          .stop(true, true)
+          .slideDown('fast');
+    }, function () {
+        $(this)
+          .not ('.open')
+          .find('.dropdown-menu')
+          .first()
+          .stop(true, true)
+          .slideUp('fast');
+    });
+
+    // Adaptive Image Processing --
+    var intro = document.getElementById("intro");
+    var introFiller = document.getElementById("intro-bgfiller");
+    var p = parseInt($('body').css("padding-top"), 10);
+    var img = new Image();
+    // img.src = window.getComputedStyle(intro).getPropertyValue("background-image").replace(/url\(|\)$/ig, "");
+    // need to use a direct link for codepen reasons.
+    img.src = "https://res.cloudinary.com/djhkdplck/image/upload/v1488045779/turntables1-bw2-test.png";
+    var bgHeight = intro.offsetWidth * img.height / img.width;
+    var bgGap = (intro.offsetHeight > bgHeight ? intro.offsetHeight - bgHeight : window.innerHeight - intro.offsetHeight );
+
+     function resize(){
+        bgHeight = intro.offsetWidth * img.height / img.width;
+        // bgGap = (intro.offsetHeight > bgHeight ? intro.offsetHeight - bgHeight : window.innerHeight - intro.offsetHeight);
+        intro.style.height = bgHeight + bgGap +'px';
+        introFiller.style.height = bgGap +'px';
+        // var h = window.getComputedStyle(intro).getPropertyValue("height");
+        // var w = window.getComputedStyle(intro).getPropertyValue("width");
+        // document.getElementById("output").innerHTML = "Height: " + h + " Width: " + w;
+    }
+    window.onresize = resize; resize();
+};
