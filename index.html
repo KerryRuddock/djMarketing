@@ -9,32 +9,23 @@
   <meta name="keywords" content="music artists soundcloud dubstep house electronic trance youtube spotify">
   <meta name="author" content="Kerry Ruddock">
   <title>Sound Worx</title>
-  
+
   <link rel='dns-prefetch' href='//fonts.googleapis.com' />
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/loadjs/3.5.0/loadjs.min.js"></script>
 
   <!-- Latest compiled and minified CSS - Don't use Bootstrap4 -->
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
-  <link href="styles/style.css" rel="stylesheet"> -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+  <link href="styles/style.css" rel="stylesheet">
 
-  <!-- Custom Fonts -->
-  <link href="styles/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <script>
-
-      loadjs(["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
-              "styles/style.css",
-              "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js",
-              "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js",
-              "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
-              "scripts/djmarketing.js"], {
-        success: function djMain() { /* all scripts loaded in series */ },
-        async: false
-      });
-
+    loadjs(["https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+            "scripts/djmarketing.js"], {
+      success: function djMain() { /* all scripts loaded in series */ },
+      async: false
+    });
   </script>
-
 </head>
 <body>
   <img style="display:none;" src="https://res.cloudinary.com/djhkdplck/image/upload/v1488045779/turntables1-bw2-test.png" alt="landing page image">
@@ -149,10 +140,17 @@
       </div>
     </section>
 
-    <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="scripts/djmarketing.js"></script> -->
-
+    <script type="text/javascript">
+      var stylesheet = document.createElement('link');
+      stylesheet.href = 'https://fonts.googleapis.com/css?family=Raleway';
+      stylesheet.rel = 'stylesheet';
+      stylesheet.type = 'text/css';
+      document.getElementsByTagName('head')[0].appendChild(stylesheet);
+      stylesheet = document.createElement('link');
+      stylesheet.href = '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+      stylesheet.rel = 'stylesheet';
+      stylesheet.type = 'text/css';
+      document.getElementsByTagName('head')[0].appendChild(stylesheet);
+    </script>
 </body>
 </html>

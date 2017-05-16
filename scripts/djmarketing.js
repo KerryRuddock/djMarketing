@@ -77,7 +77,6 @@ $(function djMain() {
   }); // window scroll
 
   // Start Promo Animation
-
   if (isAnimationOn) {
     var pro1 = $("#pro1");
 
